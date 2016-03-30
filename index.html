@@ -1,23 +1,17 @@
 ---
 layout: default
 ---
-
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+<div class="wrapper">
+    <header>
+        <div class="logo-container">
+          <a class="logo" href="/" style="background-image: url('/images/logo.jpg')"></a>
+        </div>
+        <div class="title-container"><h1>Gracker</h1></div>
+        <div class="tagline-container"><p>Tracking your things.</p></div>
+    </header>
+    <main>
+      <div class="content">
+        {% include content.html %}
+      </div>
+    </main>
 </div>
